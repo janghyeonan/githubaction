@@ -45,4 +45,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO_ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: ${{ github.actor }} 님 소스 웹서버 반영 완료 됐어요.
+          args: ${{ github.actor }}님 깃허브액션이 진행됐어요.

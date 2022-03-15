@@ -39,3 +39,10 @@ jobs:
       - name: Run!
         run: |
           python autotest.py
+
+      - name: send custom message with args
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: ${{ github.actor }} 님 소스 웹서버 반영 완료 됐어요.

@@ -13,7 +13,8 @@ soup = BeautifulSoup(response.text, 'html.parser')
 word_lst =[]
 for j, k, l in zip([i.get_text().replace('\t',"").replace('\n',"") for i in soup.select('.subject_fixed')], [a.get_text().replace('\t',"").replace('\n',"") for a in soup.select('.timestamp')],[domain[:-1]+o.attrs["href"] for o in soup.select(".list_subject")]):
     lst = re.sub('[-=+,#/\?:^.@*\"※~ㆍ!』‘|\(\)\[\]`\'…》\”\“\’·]', ' ', j).replace("  ","")
-    print(k+" "+lst +" "+l)    
+    print(k+" "+lst)
+    print(l)
     for j in lst.split(" "):
         word_lst.append(j)        
     if "나눔" in j:

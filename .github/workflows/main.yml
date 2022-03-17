@@ -39,7 +39,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run!
         run: |
-          python autotest.py
+          python autotest.py ${{ secrets.TELEGRAM_TOKEN }} ${{ secrets.TELEGRAM_TO_ID }}
 
       - name: send custom message with args
         uses: appleboy/telegram-action@master

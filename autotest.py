@@ -17,7 +17,7 @@ for j, k, l in zip([i.get_text().replace('\t',"").replace('\n',"") for i in soup
     print(l)
     for j in lst.split(" "):
         word_lst.append(j)        
-    if "나눔" in j:
+    if "대통령" in j:
         telegram.Bot(token=sys.argv[1]).send_message(chat_id=sys.argv[2], text=l)
 
 sset ={}

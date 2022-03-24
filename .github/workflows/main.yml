@@ -44,7 +44,6 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v1
         with:
-          name: test_result.txt
           path: test_result.txt
 
       - name: send custom message with args

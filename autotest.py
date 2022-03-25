@@ -30,3 +30,5 @@ for i in word_lst:
 sorted_dict = sorted(sset.items(), reverse=True, key=lambda x: x[1])
 content_t = ''.join([i[0]+str(i[1])+', ' for i in sorted_dict[0:11]])
 print(content_t)
+
+requests.get("http://janghyun0607:1195fc27543d6b3db673cfe02c47931f8e@jenkins.nearthlab.com:28081/job/qa_automation_test1/build?token=devicetest1")

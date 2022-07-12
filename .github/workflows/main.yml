@@ -4,9 +4,9 @@ name: CI
 
 # Controls when the workflow will run
 on:
-#   schedule:
-    # Runs "at minute 55 past every hour" (see https://crontab.guru)
-#     - cron: '*/15 * * * *'
+  schedule:
+#     Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '*/10 * * * *'
 
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -41,11 +41,11 @@ jobs:
         run: |
           python autotest.py ${{ secrets.TELEGRAM_TOKEN }} ${{ secrets.TELEGRAM_TO_ID }} > test_result.txt
       
-      - name: upload
-        uses: actions/upload-artifact@v1
-        with:
-          name: result
-          path: test_result.txt
+#       - name: upload
+#         uses: actions/upload-artifact@v1
+#         with:
+#           name: result
+#           path: test_result.txt
 
       - name: send custom message with args
         uses: appleboy/telegram-action@master

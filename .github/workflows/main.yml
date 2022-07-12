@@ -6,7 +6,7 @@ name: CI
 on:
   schedule:
 #     Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
 
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -39,8 +39,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run!
         run: |
-          python autotest.py ${{ secrets.TELEGRAM_TOKEN }} ${{ secrets.TELEGRAM_TO_ID }} > test_result.txt
-      
+          python autotest.py ${{ secrets.TELEGRAM_TOKEN }} ${{ secrets.TELEGRAM_TO_ID }} ${{ secrets.CLIEN_WRITER_ID }}
+          
 #       - name: upload
 #         uses: actions/upload-artifact@v1
 #         with:

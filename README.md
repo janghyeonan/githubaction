@@ -1,1 +1,3 @@
-# githubaction
+# 설명
+##1. gitgub_action
+###깃허브 액션에 크롤링 + 텔레그램 연동  
